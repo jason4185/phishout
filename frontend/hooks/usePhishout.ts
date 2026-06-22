@@ -88,7 +88,6 @@ export function usePhishout(): UsePhishoutReturn {
             address: PHISHOUT_CONTRACT,
             functionName: 'get_storage',
             args: [url],
-            stateStatus: 'accepted',
           })
           const n = Number(resultValue)
           if (n === 0 || n === 1) {
