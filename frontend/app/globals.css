@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+/* Class-based dark mode for next-themes */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ─────────────────────────────────────────
+   Phishout design tokens
+   Navy identity: deep blue-navy bg, amber gold accent.
+   Navy + gold is a deliberate, premium pairing.
+   All colors in oklch(). No hex, no rgb() anywhere.
+   Light values in :root, dark overrides in .dark.
+───────────────────────────────────────── */
+:root {
+  /* Brand — amber/gold: the defining accent against navy */
+  --ph-brand:           oklch(75% 0.18 75);
+  --ph-brand-hover:     oklch(68% 0.17 75);
+  --ph-on-brand:        oklch(15% 0.04 75);
+
+  /* Backgrounds — navy-tinted off-white (not pure white) */
+  --ph-bg:              oklch(96.5% 0.015 255);
+  --ph-surface:         oklch(99% 0.007 255);
+  --ph-surface-raised:  oklch(94% 0.018 255);
+
+  /* Text — navy-tinted dark for light mode */
+  --ph-text:            oklch(16% 0.04 255);
+  --ph-text-muted:      oklch(45% 0.025 255);
+  --ph-text-subtle:     oklch(61% 0.018 255);
+
+  /* Borders */
+  --ph-border:          oklch(86% 0.025 255);
+  --ph-border-strong:   oklch(74% 0.03 255);
+
+  /* State — flagged (coral-red) */
+  --ph-flagged:         oklch(62% 0.21 25);
+  --ph-flagged-bg:      oklch(97.5% 0.025 25);
+  --ph-flagged-border:  oklch(84% 0.09 25);
+
+  /* State — clean (muted emerald) */
+  --ph-clean:           oklch(65% 0.15 155);
+  --ph-clean-bg:        oklch(97.5% 0.022 155);
+  --ph-clean-border:    oklch(84% 0.08 155);
+
+  /* State — error (warm orange: distinct from amber brand and coral-red) */
+  --ph-error:           oklch(68% 0.18 45);
+  --ph-error-bg:        oklch(97.5% 0.018 45);
+  --ph-error-border:    oklch(84% 0.075 45);
+
+  /* On-state text — contrasts against solid state color backgrounds */
+  --ph-on-flagged:      oklch(98% 0.008 25);
+  --ph-on-clean:        oklch(98% 0.006 155);
+  --ph-on-error:        oklch(98% 0.006 45);
+}
+
+.dark {
+  /* Backgrounds — real, present navy. Not black, not desaturated gray-blue. */
+  --ph-bg:              oklch(18% 0.05 255);
+  --ph-surface:         oklch(23% 0.055 255);
+  --ph-surface-raised:  oklch(27% 0.05 255);
+
+  /* Text — warm off-white, navy-family */
+  --ph-text:            oklch(95% 0.01 255);
+  --ph-text-muted:      oklch(65% 0.02 255);
+  --ph-text-subtle:     oklch(48% 0.018 255);
+
+  /* Borders — mid-navy, visible but not harsh */
+  --ph-border:          oklch(30% 0.04 255);
+  --ph-border-strong:   oklch(38% 0.04 255);
+
+  /* State dark overrides — same hues, dark tinted surfaces */
+  --ph-flagged-bg:      oklch(16% 0.065 25);
+  --ph-flagged-border:  oklch(26% 0.115 25);
+
+  --ph-clean-bg:        oklch(15% 0.055 155);
+  --ph-clean-border:    oklch(25% 0.095 155);
+
+  --ph-error-bg:        oklch(16% 0.06 45);
+  --ph-error-border:    oklch(26% 0.105 45);
+}
+
+/* ─────────────────────────────────────────
+   Tailwind v4 theme — map ph-* tokens to
+   shadcn/ui utility color names
+───────────────────────────────────────── */
+@theme inline {
+  /* Fonts */
+  --font-sans:                    var(--font-jakarta);
+  --font-mono:                    var(--font-jetbrains);
+
+  /* Radius */
+  --radius-sm:                    0.375rem;
+  --radius-md:                    0.5rem;
+  --radius-lg:                    0.75rem;
+  --radius-xl:                    1rem;
+
+  /* Core */
+  --color-background:             var(--ph-bg);
+  --color-foreground:             var(--ph-text);
+
+  /* Card/Popover */
+  --color-card:                   var(--ph-surface);
+  --color-card-foreground:        var(--ph-text);
+  --color-popover:                var(--ph-surface);
+  --color-popover-foreground:     var(--ph-text);
+
+  /* Primary — brand amber/gold */
+  --color-primary:                var(--ph-brand);
+  --color-primary-foreground:     var(--ph-on-brand);
+
+  /* Secondary / muted */
+  --color-secondary:              var(--ph-surface-raised);
+  --color-secondary-foreground:   var(--ph-text);
+  --color-muted:                  var(--ph-surface-raised);
+  --color-muted-foreground:       var(--ph-text-muted);
+  --color-subtle:                 var(--ph-text-subtle);
+
+  /* Accent */
+  --color-accent:                 var(--ph-surface-raised);
+  --color-accent-foreground:      var(--ph-text);
+
+  /* Destructive — coral-red flagged state */
+  --color-destructive:            var(--ph-flagged);
+  --color-destructive-foreground: var(--ph-on-flagged);
+
+  /* Success — muted emerald clean state */
+  --color-success:                var(--ph-clean);
+  --color-success-foreground:     var(--ph-on-clean);
+
+  /* Error — warm orange */
+  --color-error:                  var(--ph-error);
+  --color-error-foreground:       var(--ph-on-error);
+
+  /* Borders and inputs */
+  --color-border:                 var(--ph-border);
+  --color-input:                  var(--ph-border);
+  --color-ring:                   var(--ph-brand);
+}
+
+/* ─────────────────────────────────────────
+   Base styles
+───────────────────────────────────────── */
+body {
+  background-color: var(--ph-bg);
+  color: var(--ph-text);
+}
+
