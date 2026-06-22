@@ -56,9 +56,7 @@ export function ResultCard({
               className="mb-1 text-sm font-medium text-foreground"
               style={{ fontFamily: "var(--font-jakarta)" }}
             >
-              {loadingPhase === "cache"
-                ? "Checking recent results…"
-                : "Verifying with GenLayer validators…"}
+              {"Verifying with GenLayer validators…"}
             </p>
             <p
               className="truncate text-xs text-muted-foreground"
