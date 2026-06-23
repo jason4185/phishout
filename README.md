@@ -101,11 +101,8 @@ View method. Returns the stored result for a URL (0 or 1), or -1 if never checke
 
 ### MVP 2 — Planned
 
-- 📦 **Multiple databases** — cross-reference results across several independent phishing and malware databases, consensus required across all sources, not just one
-- 📊 **Risk scoring** — instead of a binary flag, return a weighted risk score based on how many databases flagged the website and with what severity
-- 📜 **Full check history** — store every check permanently with timestamps, not just the latest result — exposing patterns over time and building a public on-chain phishing registry
-- 🌐 **Domain reputation signals** — supplement database lookups with domain age, TLS certificate validity, and DNS anomaly checks as additional risk signals
-- 🔌 **Public registry API** — expose the on-chain check history as a queryable public good — other contracts and frontends can call `get_storage` directly without building their own checker
+- Multiple databases — cross-reference results across several independent phishing and malware databases, consensus required across all sources, not just one
+- Risk scoring — instead of a binary flag, return a weighted risk score based on how many databases flagged the website and with what severity
 
 ---
 
