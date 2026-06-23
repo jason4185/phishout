@@ -147,7 +147,7 @@ Open http://localhost:3000, connect your Rabby wallet, and paste any website to 
 
 ## Feedback
 
-Phishout is an active GenLayer Builder Program submission. Issues and suggestions are welcome on GitHub. If you encounter an unexpected result, open an issue with the transaction hash so it can be traced on the Bradbury explorer.
+Phishout is an active GenLayer Builder Program submission. Feedback and suggestions are welcome on GitHub.
 
 ---
 
