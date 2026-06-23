@@ -1,6 +1,6 @@
 # Phishout
 
-Phishout is a trustless website phishing checker built on GenLayer Bradbury. Every check submitted to Phishout is verified by a GenLayer Intelligent Contract through validator consensus — multiple independent validators each query a live phishing database separately, reach exact agreement on the result, and confirm it on-chain. The database that flags phishing sites is maintained independently — Phishout does not build or maintain it. Phishout's job is narrower and more specific: it makes the act of querying that database trustless. You are not trusting Phishout's infrastructure. You are trusting that independent validators all agreed.
+Phishout is a trustless website phishing detector built on GenLayer Bradbury. Every check submitted to Phishout is verified by a GenLayer Intelligent Contract through validator consensus — multiple independent validators each query a live phishing database separately, reach exact agreement on the result, and confirm it on-chain. The database that flags phishing sites is maintained independently — Phishout does not build or maintain it. Phishout's job is narrower and more specific: it makes the act of querying that database trustless. You are not trusting Phishout's infrastructure. You are trusting that independent validators all agreed.
 
 **Live Demo:** https://phishout.vercel.app
 
@@ -8,9 +8,9 @@ Phishout is a trustless website phishing checker built on GenLayer Bradbury. Eve
 
 ## The Vision
 
-Every phishing checker on the internet today asks you to trust one backend. You paste a link, one server queries a database, and one server sends back an answer. You have no way to verify it told you the truth. Phishout removes that invisible trust dependency entirely. Multiple independent GenLayer validators each query the database on their own — with no knowledge of what the others found — and the result is only accepted when they all agree. Not one server's word. Every validator's.
+Every phishing detector on the internet today asks you to trust one backend. You paste a link, one server queries a database, and one server sends back an answer. You have no way to verify it told you the truth. Phishout removes that invisible trust dependency entirely. Multiple independent GenLayer validators each query the database on their own — with no knowledge of what the others found — and the result is only accepted when they all agree. Not one server's word. Every validator's.
 
-This matters most in Web3, where the stakes of a wrong answer are irreversible. A phishing checker that has been tampered with — one that quietly tells you a scam site is safe — is not a hypothetical risk. It is exactly the kind of single-point-of-failure attack that decentralized consensus is designed to prevent. Phishout makes the check itself trustless, not just fast.
+This matters most in Web3, where the stakes of a wrong answer are irreversible. A phishing detector that has been tampered with — one that quietly tells you a scam site is safe — is not a hypothetical risk. It is exactly the kind of single-point-of-failure attack that decentralized consensus is designed to prevent. Phishout makes the check itself trustless, not just fast.
 
 ---
 
@@ -20,7 +20,7 @@ Two things came together to make Phishout possible.
 
 The first was GenLayer's own canonical demonstration of Intelligent Contracts: a price oracle that fetches live data from external APIs and reaches validator consensus on the result. That prototype proved that GenLayer's non-deterministic web access, combined with its equivalence principle, could make any external data source's answer trustless — not just price feeds, but any API a contract could reach.
 
-The second was a gap in the market. Every phishing checker in existence follows the same architecture: one server, one database call, one answer you are asked to trust blindly. None of them make the check itself verifiable. Phishout applies the same oracle pattern GenLayer demonstrated for price data to a real Web3 safety problem. The underlying detection database already exists. Phishout's contribution is making the act of querying it trustless.
+The second was a gap in the market. Every phishing detector in existence follows the same architecture: one server, one database call, one answer you are asked to trust blindly. None of them make the check itself verifiable. Phishout applies the same oracle pattern GenLayer demonstrated for price data to a real Web3 safety problem. The underlying detection database already exists. Phishout's contribution is making the act of querying it trustless.
 
 ---
 
@@ -33,7 +33,7 @@ Phishout is structurally the same pattern as a decentralized price oracle — fe
 Because the phishing database returns a binary flag (0 or 1) for any given website, validators use exact-match equivalence — the strictest possible consensus mode. No tolerance bands, no language model judgment, no ambiguity. Either every validator saw the same answer or the check fails rather than silently passing with an inconsistent result.
 
 **No single backend**
-Every other phishing checker has one server you call. Phishout has no privileged relay. The Intelligent Contract is the only intermediary, and its logic is publicly verifiable on-chain. Not even Phishout itself can change the result a user receives.
+Every other phishing detector has one server you call. Phishout has no privileged relay. The Intelligent Contract is the only intermediary, and its logic is publicly verifiable on-chain. Not even Phishout itself can change the result a user receives.
 
 **Fail-safe on disagreement**
 If validators do not reach exact agreement — which can happen if the database is mid-update — the transaction fails rather than silently returning an unreliable answer. The user is asked to try again. A security tool should never guess.
