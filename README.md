@@ -86,14 +86,13 @@ View method. Returns the stored result for a URL (0 or 1), or -1 if never checke
 
 ### MVP 1 — Current (Live on Bradbury)
 
-- ✅ Trustless phishing check through exact-match validator consensus
-- ✅ Every check always fetches fresh from the database — no stale cached results
-- ✅ On-chain storage per URL — latest result always queryable via `get_storage`
-- ✅ Live explorer link during every check — users watch consensus happen in real time
+- ✅ Trustless phishing detection through exact-match validator consensus
+- ✅ Every website always fetches fresh from the database — no stale cached results
+- ✅ On-chain storage per website — latest result always queryable via get_storage
+- ✅ Explorer link shown during verification — users can track their transaction on the Bradbury explorer while validators are reaching consensus
 - ✅ User wallet signing — each user signs their own transaction, no shared sponsor wallet
-- ✅ Session-based recent checks log — live feed of every check in the current session
+- ✅ Session-based recent checks log — live feed of every website checked in the current session
 - ✅ How It Works page — full consensus flow explained in plain language for non-technical users
-- ✅ Light / Dark / System theme support
 - ✅ Deployed on GenLayer Bradbury Testnet
 
 **Contract address:** `0xf5E68861Fcf61141190bf3d5383795E207337436`
