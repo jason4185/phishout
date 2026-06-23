@@ -109,31 +109,6 @@ View method. Returns the stored result for a URL (0 or 1), or -1 if never checke
 
 ---
 
-## UI Tour
-
-**Homepage**
-A single-purpose hero: headline, subheading explaining the trustless model, and a website input with a Check Website button. The focus is the check.
-
-**Loading state**
-While validators are reaching consensus, the page shows "Verifying with GenLayer validators..." alongside a live link to the transaction on the Bradbury explorer — so users can watch the consensus happen in real time rather than staring at a spinner.
-
-**Clean result**
-A green card: "No issues found." The website is not currently listed in any known phishing database. A disclaimer reminds users this reflects the database at time of check — not a permanent guarantee of safety.
-
-**Flagged result**
-A coral card: "This website is flagged." Clear instruction not to enter personal information or connect a wallet. No ambiguity about what the user should do.
-
-**Error state**
-If validators cannot reach exact agreement, an amber card explains that verification could not be completed and offers a retry. The check never silently passes on a disagreement.
-
-**Recently Checked**
-A live session log of every website checked in the current browser session — website, verdict badge, and whether the result came from a fresh validator check. Resets on page refresh.
-
-**How It Works (/about)**
-A full explanation of the consensus flow, why checking independently matters, and how Phishout differs from every other phishing checker. Written for non-technical users — no jargon, no assumed blockchain knowledge.
-
----
-
 ## Project Structure
 phishout/
 

@@ -18,7 +18,7 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Phishout — Trustless phishing URL checker",
   description:
-    "Check any URL against GoPlus's phishing database, verified by independent GenLayer validator consensus.",
+    "Check any URL against the database, verified by independent GenLayer validator consensus.",
 };
 
 export default function RootLayout({

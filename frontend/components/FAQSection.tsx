@@ -19,13 +19,13 @@ const FAQ_ITEMS: FAQItem[] = [
     value: "flagged",
     question: "What does \"Flagged\" mean?",
     answer:
-      "GoPlus's phishing database has this URL listed as a known phishing site. Don't enter credentials, sign a transaction, or connect your wallet here.",
+      "the database has this URL listed as a known phishing site. Don't enter credentials, sign a transaction, or connect your wallet here.",
   },
   {
     value: "not-flagged",
     question: "What does \"Not flagged\" mean?",
     answer:
-      "This URL isn't in GoPlus's phishing database as of the time of check. That's not a guarantee it's safe — phishing databases can lag behind new threats. Always verify independently before entering credentials.",
+      "This URL isn't in the database as of the time of check. That's not a guarantee it's safe — phishing databases can lag behind new threats. Always verify independently before entering credentials.",
   },
   {
     value: "different",

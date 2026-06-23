@@ -326,7 +326,7 @@ export default function Home() {
             className="text-xs text-subtle"
             style={{ fontFamily: "var(--font-jakarta)" }}
           >
-            Phishout uses GoPlus Security data, verified by GenLayer validator
+            Phishout uses the database, verified by GenLayer validator
             consensus.
           </p>
         </footer>

@@ -23,7 +23,7 @@ const STEPS: Step[] = [
   {
     n: 3,
     title: "Each validator checks independently",
-    body: "Every validator queries GoPlus's phishing database on its own. No validator has any knowledge of what the others found before reporting back.",
+    body: "Every validator queries the database on its own. No validator has any knowledge of what the others found before reporting back.",
   },
   {
     n: 4,

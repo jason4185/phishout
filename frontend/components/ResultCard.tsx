@@ -96,9 +96,7 @@ export function ResultCard({
             className="text-sm text-foreground"
             style={{ fontFamily: "var(--font-jakarta)" }}
           >
-            This website appears in a known phishing database, confirmed by
-            multiple independent GenLayer validators. Do not enter any personal
-            information or connect your wallet here.
+            This website appears in a known phishing database as of the time of check. Do not enter credentials, sign a transaction, or connect your wallet here.
           </p>
           <Button variant="outline" size="sm" onClick={onReset}>
             Check another website
@@ -134,9 +132,7 @@ export function ResultCard({
             className="text-sm text-foreground"
             style={{ fontFamily: "var(--font-jakarta)" }}
           >
-            {isCached
-              ? "This website is not currently listed in any known phishing database, based on a recent check. Always stay cautious before connecting your wallet or entering personal information anywhere online."
-              : "This website is not currently listed in any known phishing database, verified by multiple independent GenLayer validators. Always stay cautious before connecting your wallet or entering personal information anywhere online."}
+            This website is not currently listed in any known phishing database as of the time of check. That is not a guarantee of safety — phishing databases can lag behind new threats. Always verify independently before entering credentials anywhere.
           </p>
           <Button variant="outline" size="sm" onClick={onReset}>
             Check another website
